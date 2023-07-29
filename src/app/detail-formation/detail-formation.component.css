@@ -1,0 +1,27 @@
+
+.detail{
+    color:#848484 !important; ;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+  }
+  .u-mt-5{
+    margin-top: 50px;
+  }
+  .u-mb-2{
+    margin-bottom: 20px;
+  }
+  .content{
+    background-color: white;
+    padding: 50px;
+  }
+  .no-padding{
+    padding-top: 0;
+  }
+  .u-pd-0{
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  

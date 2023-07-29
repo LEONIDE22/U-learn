@@ -1,0 +1,102 @@
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Begin # DIV Form -->
+        <div id="div-forms">
+          <form id="login-form">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="flaticon-add" aria-hidden="true"></span>
+            </button>
+            <div class="modal-body">
+              <input class="form-control" type="text" placeholder="What you are looking for?" required>
+            </div>
+          </form><!-- End # Login Form -->
+        </div><!-- End # DIV Form -->
+      </div>
+    </div>
+  </div>
+  <!-- END # MODAL LOGIN -->
+  
+  <header class="header header-normal">
+    <div class="topbar clearfix">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="col-md-6 col-sm-6 text-left">
+            <p>
+              <strong><i class="fa fa-phone"></i></strong> +90 543 123 45 67 &nbsp;&nbsp;
+              <strong><i class="fa fa-envelope"></i></strong> <a href="mailto:#">info@yoursite.com</a>
+            </p>
+          </div><!-- end left -->
+          <div class="col-md-6 col-sm-6 hidden-xs text-right">
+            <div class="social">
+              <a class="facebook" href="#" data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a class="twitter" href="#" data-tooltip="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a class="google" href="#" data-tooltip="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+              <a class="linkedin" href="#" data-tooltip="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a class="pinterest" href="#" data-tooltip="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+            </div><!-- end social -->
+          </div><!-- end left -->
+        </div><!-- end row -->
+      </div><!-- end container -->
+    </div><!-- end topbar -->
+  
+    <div class="container">
+      <nav class="navbar navbar-default yamm">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="logo-normal" >
+            <a class="navbar-brand" [routerLink]="['/accueil']" style="font-weight:700; padding:15px"><p style="color:#01bacf">U-LEARN</a>
+          </div>
+        </div>
+  
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/accueil">Home</a></li>
+            <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Our courses <b class="fa fa-angle-down"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="yamm-content clearfix">
+                    <div class="row-fluid">
+                      <div class="col-md-6 col-sm-6">
+                        <h4>Course Pages</h4>
+                        <ul *ngFor="let categorie of categories">
+                          <li><a href="/liste-formation/{{categorie.id}}" (click)="toPage(categorie)">{{categorie.name}}</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                        <div class="menu-widget text-center">
+                          <div class="image-wrap entry">
+                            <img src="assets/images/prettyPhoto/jackson-sophat-TQ3SgrW9lkM-unsplash.jpg" alt="" class="img-responsive">
+                            <div class="magnifier">
+                              <a href="#" title=""><i class="flaticon-add"></i></a>
+                            </div>
+                          </div><!-- end image-wrap -->
+                          <h5><a href="#">Learning Bootstrap Framework</a></h5>
+                          <small>$22.00</small>
+                          <a href="#" class="menu-button">View Course</a>
+                        </div><!-- end widget -->
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li><a [routerLink]="['/contact']">Contact</a></li>
+            <li class="dropdown hassubmenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> {{user.username}} <span class="fa fa-angle-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a [routerLink]="['/profile']">Account-Setting</a></li>
+                <li class="special" ><a (click)="logout()">Deconnecter</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav><!-- end navbar -->
+    </div><!-- end container -->
+  </header>
+  

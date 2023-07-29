@@ -1,0 +1,7 @@
+.special{
+    cursor: pointer;
+}
+.header{
+    z-index:99;
+    position: fixed;
+}
